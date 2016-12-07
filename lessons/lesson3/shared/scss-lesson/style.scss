@@ -1,0 +1,87 @@
+$break-small: 320px;
+$break-large: 1200px;
+body {
+    //background-color: #2d3e52;
+    .container-div {
+        //margin-top: 25px;
+        //margin-bottom: 25px;
+        background-color: #FFCF06;
+        //border-radius: 15px;
+        .header-row {
+            //height: 90px;
+            padding-left: 25px;
+            border-bottom: 3px solid #2d3e52;
+           
+            .logo-text {
+                padding-top: 15px;
+                //width: 150px;
+                margin-left: 25px;
+                display: inline-block;
+                color: white;
+                font-size: 28px;
+            }
+            
+            .arrows {
+                padding: 10px 10px;
+                margin-right: 20px;
+                img {
+                    height: 50px;
+                    padding-left: 5px;
+                    &:hover {
+                        opacity: 0.9;
+                        cursor: hand;
+                    }
+                }
+            }
+        }
+        .content-row {
+            //border: 1px solid red;
+            padding: 10px;
+            .col-left {
+                padding: 0;
+                >div {
+                    background-color: #f0f1f3;
+                    //height: 200px;
+                    table {
+                        background: #FFCF06;
+                        width: 100%;
+                        tr {
+                            border: 2px solid #fff;
+                            td {
+                                font-size: 17px;
+                                color: white;
+                                font-weight: bold;
+                                padding: 5px 5px 5px 25px;
+                              
+                                &.active {
+                                    background-color: lighten($color: #fdff1b, $amount: 0%);
+                                    &:hover {
+                                        background-color: lighten($color: #fdff1b, $amount: 0%);
+                                    }
+                                }
+                                &:hover {
+                                    background-color: lighten($color: #fdff1b, $amount: 0%);
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-right {
+                padding-left: 25px;
+                //border: 1px solid green;
+                @media screen and (max-width: 768px) {
+                    padding-left: 15px;
+                    padding-top: 15px;
+                }
+                .iframe-row {
+                    //border: 1px solid #8ac8e9;
+                    iframe {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

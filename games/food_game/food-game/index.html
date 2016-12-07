@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <!-- shan -->
+    <title>Food Game</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+     
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi">
+    </script>
+    <script type="text/javascript">
+
+        // Load the Google Transliterate API
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+
+        function onLoad() {
+            var options = {
+                sourceLanguage:
+                google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage:
+                        [google.elements.transliteration.LanguageCode.SINHALESE],
+                shortcutKey: 'ctrl+g',
+                transliterationEnabled: true
+            };
+
+            // Create an instance on TransliterationControl with the required
+            // options.
+            var control =
+                    new google.elements.transliteration.TransliterationControl(options);
+
+            // Enable transliteration in the textbox with id
+            // 'transliterateTextarea'.
+            control.makeTransliteratable(['reason_input_nnf']);
+            control.makeTransliteratable(['reason_input_nf']);
+        }
+        google.setOnLoadCallback(onLoad);
+    </script>
+</head>
+<body style="background-color: crimson"> 
+<div id="content" style="background-color: crimson">
+	<div class="row" style="padding: 10px">
+		<div class="col-md-9 col-sm-12 labels" style="z-index: 1">
+			<div class="alert alert-success"  style="text-align: center" >
+				<label id="massegebox" style ="font-weight:bold"></label>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-12 labels" style="z-index: 1">
+			<div class="alert alert-success"  style="text-align: center" >
+				<label id="scorecard" style ="font-weight:bold">ලකුණු: 0</label>
+			</div>
+		</div>
+	</div>
+     
+    <div class="pyramid-game">
+        <div class="container-fluid">
+            <div style="background-color: whitesmoke">
+                <ol class="description">
+                    <li>
+                        නිසරු ආහාර වර්ග " හා "පොශ්‍යජනක අහර වර්ග" වලට අයත් ආහාර වර්ගවල රූපසටහන් ඔබට ලැබී ඇත.
+                        එම ආහාර නිසරු ආහාරයක්ද,<br> එසේ නැතහොත් පෝෂ්‍යදායි ආහාරයක්ද යන වග තීරණය කර අදාල ස්ථානයේ තබන්න.
+                     </li>
+                    <li>
+                        සාර්ථක උත්සහයක් සඳහා ලකුණු දෙකක් (2) හිමිවේ. සෑම අසාර්ථක උත්සාහයකට ලකුණු දෙකක් (2) අහිමි වේ.
+                    </li>
+                    <li>
+                        ඔබගේ වර්ගීකරණයට හේතු පහත කොටුවේ සඳහන් කරන්න. හේතුව සඳහා ලකුණු තුනක් (3) හිමිවේ.
+                    </li>
+                </ol>
+            </div>
+            <div class="row">
+                <div class="col-md-5" style="z-index: 1">
+                    <div class="panel panel-info">
+                        <!--div class="panel-heading">
+                            <h3 class="panel-title" style ="font-weight:bold">"නිසරු ආහාර වර්ග " හා "පොශ්‍යජනක අහර වර්ග" වලට අයත් ආහාර වර්ගවල රූපසටහන් ඔබට ලැබී ඇත.</h3>
+                        </div-->
+                        <div class="panel-body">
+                            <div class="food row">
+                                <div class="foods col-xs-3 food-1-1" id="අඹ"></div>
+                                <div class="foods col-xs-3 food-2-1" id="අයිස්ක්රීම්"></div>
+                                <div class="foods col-xs-3 food-2-2" id="අලිගැටපේර"></div>
+                                <div class="foods col-xs-3 food-2-3" id="කජු"></div>
+                                
+                                <div class="foods col-xs-3 food-3-1" id="කඩල"></div>
+                                <div class="foods col-xs-3 food-3-2" id="කිරි"></div>
+                                <div class="foods col-xs-3 food-3-3" id="කේක්රෝල්"></div>
+                                <div class="foods col-xs-3 food-3-4" id="ක්‍රීම්"></div>
+                                
+								<div class="foods col-xs-3 food-3-5" id="ගස්ලබු"></div>
+                                <div class="foods col-xs-3 food-4-1" id="චීස්"></div>
+                                <div class="foods col-xs-3 food-4-2" id="ඥනකතා"></div>
+                                <div class="foods col-xs-3 food-4-3" id="ටොෆී"></div>
+                                
+                                <div class="foods col-xs-3 food-4-4" id="ඩෝනට්"></div>
+                                <div class="foods col-xs-3 food-5-1" id="පළතුරුසලාදය"></div>
+                                <div class="foods col-xs-3 food-5-2" id="පානවර්ග"></div>
+                                <div class="foods col-xs-3 food-5-3" id="පෙතිඅල"></div>
+                                
+                                <div class="foods col-xs-3 food-5-4" id="පේර"></div>
+                                <div class="foods col-xs-3 food-5-5" id="මුංඇට"></div>
+                                <div class="foods col-xs-3 food-5-6" id="මුදවපුකිරි"></div>
+                                <div class="foods col-xs-3 food-5-7" id="මුරුක්කන්"></div>
+                                 
+                                <div class="foods col-xs-3 food-5-8" id="රටකජු"></div>
+                                <div class="foods col-xs-3 food-5-9" id="වඩෙ"></div>
+                                <div class="foods col-xs-3 food-6-1" id="හොට්ඩොග්"></div>
+                                <div class="foods col-xs-3 food-6-2" id="කේක්"></div>
+                                    
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="panel panel-success">
+                        <!--div class="panel-heading" >
+                            <h3 class="panel-title" style ="font-weight:bold">එම ආහාර නිසරු ආහාරයක්ද, එසේ නැතහොත් පෝෂ්‍යදායි ආහාරයක්ද යන වග තීරණය කර අදාල ස්ථානයේ තබන්න.</h3>
+                        </div-->
+                        <div class="panel-body">
+                            <div id="food_catagories">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel panel-success">
+                                            <div id="non_nutritious_foods" class="panel-heading">
+                                                <h4 class="panel-title" style ="font-weight:bold">නිසරු ආහාර</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="nn_foods">
+													<table style="width:100%;">
+                                                        <tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+														<tr>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                            <td class="tableData"><div class="nnf"></div></td>
+                                                        </tr>
+                                                    </table>
+													</div>
+													
+													 <div>
+                                                    <textarea class="textArea" id="reason_input_nnf" style="width:300px;height:30px" disabled="disabled"></textarea>
+                                                   <!-- <input type="text" id="reason_input_nnf" disabled="disabled">-->
+                                                    <p id="reason_nnf"> </p>
+                                                </div>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="panel panel-success">
+                                            <div id="nutritious_foods" class="panel-heading">
+                                                <h4 class="panel-title" style ="font-weight:bold">පෝෂ්‍යදායි ආහාර</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="n_foods">
+                                                    <table style="width:100%;">
+                                                        <tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+														<tr>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                            <td class="tableData"><div class="nf"></div></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <textarea class="textArea" id="reason_input_nf" style="width:300px;height:30px" disabled="disabled"></textarea>
+                                                    <p id="reason_nf"> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+	</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+     
+</div>
+<script src="../shared/scormfunctions.js" type="text/javascript"></script>
+<script src="../shared/contentfunctions.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/script3.js"></script>
+<script type="text/javascript">
+
+    function ConvertMilliSecondsIntoSCORM2004Time(intTotalMilliseconds){
+
+        var ScormTime = "";
+
+        var HundredthsOfASecond;	//decrementing counter - work at the hundreths of a second level because that is all the precision that is required
+
+        var Seconds;	// 100 hundreths of a seconds
+        var Minutes;	// 60 seconds
+        var Hours;		// 60 minutes
+        var Days;		// 24 hours
+        var Months;		// assumed to be an "average" month (figures a leap year every 4 years) = ((365*4) + 1) / 48 days - 30.4375 days per month
+        var Years;		// assumed to be 12 "average" months
+
+        var HUNDREDTHS_PER_SECOND = 100;
+        var HUNDREDTHS_PER_MINUTE = HUNDREDTHS_PER_SECOND * 60;
+        var HUNDREDTHS_PER_HOUR   = HUNDREDTHS_PER_MINUTE * 60;
+        var HUNDREDTHS_PER_DAY    = HUNDREDTHS_PER_HOUR * 24;
+        var HUNDREDTHS_PER_MONTH  = HUNDREDTHS_PER_DAY * (((365 * 4) + 1) / 48);
+        var HUNDREDTHS_PER_YEAR   = HUNDREDTHS_PER_MONTH * 12;
+
+        HundredthsOfASecond = Math.floor(intTotalMilliseconds / 10);
+
+        Years = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_YEAR);
+        HundredthsOfASecond -= (Years * HUNDREDTHS_PER_YEAR);
+
+        Months = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MONTH);
+        HundredthsOfASecond -= (Months * HUNDREDTHS_PER_MONTH);
+
+        Days = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_DAY);
+        HundredthsOfASecond -= (Days * HUNDREDTHS_PER_DAY);
+
+        Hours = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_HOUR);
+        HundredthsOfASecond -= (Hours * HUNDREDTHS_PER_HOUR);
+
+        Minutes = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MINUTE);
+        HundredthsOfASecond -= (Minutes * HUNDREDTHS_PER_MINUTE);
+
+        Seconds = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_SECOND);
+        HundredthsOfASecond -= (Seconds * HUNDREDTHS_PER_SECOND);
+
+        if (Years > 0) {
+            ScormTime += Years + "Y";
+        }
+        if (Months > 0){
+            ScormTime += Months + "M";
+        }
+        if (Days > 0){
+            ScormTime += Days + "D";
+        }
+
+        //check to see if we have any time before adding the "T"
+        if ((HundredthsOfASecond + Seconds + Minutes + Hours) > 0 ){
+
+            ScormTime += "T";
+
+            if (Hours > 0){
+                ScormTime += Hours + "H";
+            }
+
+            if (Minutes > 0){
+                ScormTime += Minutes + "M";
+            }
+
+            if ((HundredthsOfASecond + Seconds) > 0){
+                ScormTime += Seconds;
+
+                if (HundredthsOfASecond > 0){
+                    ScormTime += "." + HundredthsOfASecond;
+                }
+
+                ScormTime += "S";
+            }
+
+        }
+
+        if (ScormTime == ""){
+            ScormTime = "0S";
+        }
+
+        ScormTime = "P" + ScormTime;
+
+        return ScormTime;
+    }
+
+    function RecordTest(score){
+//        console.log('called');
+//        console.log(score);
+        ScormProcessSetValue("cmi.score.raw", score);
+        ScormProcessSetValue("cmi.score.min", "0");
+        ScormProcessSetValue("cmi.score.max", "100");
+
+        var scaledScore = score / 290;
+        ScormProcessSetValue("cmi.score.scaled", scaledScore);
+
+        //consider 70% to be passing
+        if (score >= 50){
+            ScormProcessSetValue("cmi.success_status", "passed");
+        }
+        else{
+            ScormProcessSetValue("cmi.success_status", "failed");
+        }
+    }
+    ScormProcessInitialize();
+    ScormProcessSetValue("cmi.completion_status", "completed");
+    var time =ConvertMilliSecondsIntoSCORM2004Time(new Date().getTime());
+    ScormProcessSetValue("cmi.session_time", time);
+    ScormProcessSetValue("cmi.exit", "");
+
+</script>
+
+
+</body>
+</html>

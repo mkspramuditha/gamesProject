@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snake and Ladder Game</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/frame.css" type="text/css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <img id="grid_img" style="display:none" src="img/grid_final3.png" alt="The Scream" width="3000" height="3000">
+    <img id="mark_img" style="display:none" src="img/token_red.png" alt="mark">
+    <img id="ai_mark_img" style="display:none" src="img/token_blue.png" alt="ai_mark">
+
+    <!--<div class="row spacer"></div>-->
+    <div class="nav-div">
+        <div class="container">
+            <ul class="nav nav-tabs main-tabs">
+                <li role="presentation" class="active"><a href="#">Snakes & Ladders</a></li>
+                <li role="presentation"><a href="#">Help</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container container-div">
+        <div class="row content">
+            <div id="canvas_div" class="col-md-7 left-col"></div>
+
+            <div class="col-md-5 right-col" style="text-align:center">
+                <div class="row logo"><img src="./img/logo.png" alt=""></div>
+                <div id="dice_div" class="row">
+                    <label style="display:none;">Dice : </label>
+                    <label style="font-size:30px;display:none;" id="txtDice">-</label><br>
+
+                    <img id="dice_moving_image" width="150" height="150" style="display:none" src="img/dice1.gif" alt="moving dice">
+                    <img id="dice_img" width="150" height="150" src="img/dice_faces_1.png" alt="Dice">
+                    </br>
+
+                    <div class="row btn-row">
+                        <button id="btnThrow" onclick="startTurn()" class="btn btn-success">දාදු කැටය දමන්න</button>
+                        <button id="btnRestart" onclick="main()" class="btn btn-danger">නැවත ආරම්භ කරන්න</button>
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="key">
+                        <label>ඔබ : </label>
+                        <img width="50" height="50" src="img/token_red.png" alt="you">
+                    </div>
+
+                    <div class="key">
+                        <label>යාළුවා : </label>
+                        <img width="50" height="50" src="img/token_blue.png" alt="com">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+	
+	<div class="container">
+	  <!-- Trigger the modal with a button -->
+	  <button style="display:none;" id="alert_btn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title" id="alert_title">Modal Header</h4>
+			</div>
+			<div class="modal-body"  style="background-color:red; color:white;">
+			  <p id="alert_body">Some text in the modal.</p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	  
+	</div>
+
+
+
+    <script src="../shared/scormfunctions.js" type="text/javascript"></script>
+    <script src="../shared/contentfunctions.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+
+        function ConvertMilliSecondsIntoSCORM2004Time(intTotalMilliseconds){
+
+            var ScormTime = "";
+
+            var HundredthsOfASecond;	//decrementing counter - work at the hundreths of a second level because that is all the precision that is required
+
+            var Seconds;	// 100 hundreths of a seconds
+            var Minutes;	// 60 seconds
+            var Hours;		// 60 minutes
+            var Days;		// 24 hours
+            var Months;		// assumed to be an "average" month (figures a leap year every 4 years) = ((365*4) + 1) / 48 days - 30.4375 days per month
+            var Years;		// assumed to be 12 "average" months
+
+            var HUNDREDTHS_PER_SECOND = 100;
+            var HUNDREDTHS_PER_MINUTE = HUNDREDTHS_PER_SECOND * 60;
+            var HUNDREDTHS_PER_HOUR   = HUNDREDTHS_PER_MINUTE * 60;
+            var HUNDREDTHS_PER_DAY    = HUNDREDTHS_PER_HOUR * 24;
+            var HUNDREDTHS_PER_MONTH  = HUNDREDTHS_PER_DAY * (((365 * 4) + 1) / 48);
+            var HUNDREDTHS_PER_YEAR   = HUNDREDTHS_PER_MONTH * 12;
+
+            HundredthsOfASecond = Math.floor(intTotalMilliseconds / 10);
+
+            Years = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_YEAR);
+            HundredthsOfASecond -= (Years * HUNDREDTHS_PER_YEAR);
+
+            Months = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MONTH);
+            HundredthsOfASecond -= (Months * HUNDREDTHS_PER_MONTH);
+
+            Days = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_DAY);
+            HundredthsOfASecond -= (Days * HUNDREDTHS_PER_DAY);
+
+            Hours = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_HOUR);
+            HundredthsOfASecond -= (Hours * HUNDREDTHS_PER_HOUR);
+
+            Minutes = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MINUTE);
+            HundredthsOfASecond -= (Minutes * HUNDREDTHS_PER_MINUTE);
+
+            Seconds = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_SECOND);
+            HundredthsOfASecond -= (Seconds * HUNDREDTHS_PER_SECOND);
+
+            if (Years > 0) {
+                ScormTime += Years + "Y";
+            }
+            if (Months > 0){
+                ScormTime += Months + "M";
+            }
+            if (Days > 0){
+                ScormTime += Days + "D";
+            }
+
+            //check to see if we have any time before adding the "T"
+            if ((HundredthsOfASecond + Seconds + Minutes + Hours) > 0 ){
+
+                ScormTime += "T";
+
+                if (Hours > 0){
+                    ScormTime += Hours + "H";
+                }
+
+                if (Minutes > 0){
+                    ScormTime += Minutes + "M";
+                }
+
+                if ((HundredthsOfASecond + Seconds) > 0){
+                    ScormTime += Seconds;
+
+                    if (HundredthsOfASecond > 0){
+                        ScormTime += "." + HundredthsOfASecond;
+                    }
+
+                    ScormTime += "S";
+                }
+
+            }
+
+            if (ScormTime == ""){
+                ScormTime = "0S";
+            }
+
+            ScormTime = "P" + ScormTime;
+
+            return ScormTime;
+        }
+
+        function RecordTest(score){
+//        console.log('called');
+//        console.log(score);
+            ScormProcessSetValue("cmi.score.raw", score);
+            ScormProcessSetValue("cmi.score.min", "0");
+            ScormProcessSetValue("cmi.score.max", "100");
+
+            var scaledScore = score / 290;
+            ScormProcessSetValue("cmi.score.scaled", scaledScore);
+
+            //consider 70% to be passing
+            if (score >= 50){
+                ScormProcessSetValue("cmi.success_status", "passed");
+            }
+            else{
+                ScormProcessSetValue("cmi.success_status", "failed");
+            }
+        }
+        ScormProcessInitialize();
+        ScormProcessSetValue("cmi.completion_status", "completed");
+        var time =ConvertMilliSecondsIntoSCORM2004Time(new Date().getTime());
+        ScormProcessSetValue("cmi.session_time", time);
+        ScormProcessSetValue("cmi.exit", "");
+
+    </script>
+</body>
+
+</html>

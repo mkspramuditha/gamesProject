@@ -1,0 +1,40 @@
+$pink: #DB3F89;
+.container {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.nav-div {
+  background: $pink;
+  margin-bottom: 0px;
+  .main-tabs {
+    background: $pink;
+    border-bottom: 1px solid $pink;
+    li {
+      background: $pink;
+      &.active {
+        a {
+          border: none;
+          border-radius: 0 !important;
+          color: white;
+          background: darken($pink, 8%);
+          &:hover {
+            border: none;
+            background: lighten($pink, 6%);
+            color: white;
+
+          }
+        }
+      }
+      a {
+        border: none;
+        border-radius: 0 !important;
+        color: white;
+        &:hover {
+          background: lighten($pink, 6%);
+
+        }
+      }
+    }
+  }
+}

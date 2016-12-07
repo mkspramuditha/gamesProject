@@ -1,0 +1,391 @@
+table,td{
+	/*border:1px solid;*/
+	}
+
+.f_color{
+	color:black;
+	font-weight: bold;
+}
+
+
+/*tr{
+    width:1200%;
+    height:auto;
+}
+td{
+    width: 120px;
+    height: auto;
+}*/
+
+ Pyramid Game 
+.pyramid-game {
+   /* position: relative;*/
+}/*
+.pyramid-game .levels {
+    /*padding: 5px;
+    /*background:url(../img/levels.png) top center no-repeat;
+    height:660px;
+    margin:0;
+}*/
+.pyramid-game .levels div {
+    /*list-style:none;*/
+    /*display:block;*/
+    height:108px;
+    /*margin:0 auto;*/
+    /*position:relative;*/
+}
+
+.pyramid-game .levels div.level-1{
+	background:url(../img/level-1a.png) center no-repeat;
+    width:504px;
+	background-size:100%;
+	text-align:center;
+	padding:35px 200px;
+}
+.pyramid-game .levels div.level-2-1{
+	background:url(../img/level-2-1a.png) center no-repeat;
+    width:251px;
+	background-size:100%;
+	text-align:right;
+	padding:2px 180px;
+	padding-right:0px;
+}
+.pyramid-game .levels div.level-2-2{
+	background:url(../img/level-2-2a.png) center no-repeat;
+    width:253px;
+	background-size:100%;
+	text-align:left;
+	padding:5px 0px;
+	padding-right:150px;
+}
+.pyramid-game .levels div.level-3-1{
+	background:url(../img/level-3-1a.png) center no-repeat;
+    width:251px;
+	background-size:100%;
+	text-align:right;
+	padding:5px 120px;
+	padding-right:0px;
+}
+.pyramid-game .levels div.level-3-2{
+	background:url(../img/level-3-2a.png) center no-repeat;
+    width:253px;
+	background-size:100%;
+	text-align:left;
+	padding:5px 0px;
+	padding-right:100px;
+}
+.pyramid-game .levels div.level-4{
+	background:url(../img/level-4a.png) center no-repeat;
+    width:504px;
+	background-size:100%;
+	text-align:center;
+	padding:30px 60px;
+}
+/*
+.pyramid-game .levels div.level-1,
+.pyramid-game .levels div.level-2 {
+    /*margin-bottom:10px;
+}
+.pyramid-game .levels div.level-4,
+.pyramid-game .levels div.level-5,
+.pyramid-game .levels div.level-6 {
+    height:90px;
+    /*margin-bottom: 10px;
+}
+.pyramid-game .levels div.level-6 {
+    height:92px;
+
+}*/
+
+.pyramid-game .levels div.ui-state-active {
+    background:green;
+    opacity:.1;
+    filter: alpha(opacity=10);
+}
+.food{
+    padding: 20px;
+    /*background-color: red;*/
+}
+.pyramid-game .food div {
+    list-style:none;
+    display:block;
+    width:40px;
+    height:40px;
+    /*background: url(../img/food.png) no-repeat;*/
+    cursor:move;
+    background-position: center;
+}
+
+.pyramid-game .food{
+    background-size: 80%;
+}
+
+.foods {
+    list-style:none;
+    display:inline-block;
+    /*width:40px;
+    height:40px;*/
+    /*background: url(../img/food.png) no-repeat;*/
+    cursor:move;
+    background-position: center;
+	margin:auto;
+}
+.food-1-1{
+    background:url(../img/food/food-1-1.png) no-repeat;
+}
+
+.pyramid-game .food .food-1-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-1-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+.food-1-2 {
+    background:url(../img/food/food-1-2.png) no-repeat;
+}
+
+.pyramid-game .food .food-1-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-1-2.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}	
+
+.food-2-1 {
+    background:url(../img/food/food-2-1.png) no-repeat;
+}
+
+.pyramid-game .food .food-2-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-2-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+
+.food-2-2 {
+    background:url(../img/food/food-2-2.png) no-repeat;
+}
+.pyramid-game .food .food-2-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-2-2.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+.food-3-1 {
+    background:url(../img/food/food-3-1.png) no-repeat;
+}
+.pyramid-game .food .food-3-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-3-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+.food-3-2 {
+    background:url(../img/food/food-3-2.png) no-repeat;
+}
+.pyramid-game .food .food-3-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-3-2.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+.food-3-3 {
+    background:url(../img/food/food-3-3.png) no-repeat;
+}
+.pyramid-game .food .food-3-3 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-3-3.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-3-4{
+    background:url(../img/food/food-3-4.png) no-repeat;
+}
+.pyramid-game .food .food-3-4 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-3-4.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-4-1 {
+    background:url(../img/food/food-4-1.png) no-repeat;
+}
+.pyramid-game .food .food-4-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-4-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-4-2 {
+    background:url(../img/food/food-4-2.png) no-repeat;
+}
+.pyramid-game .food .food-4-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-4-2.png) no-repeat;
+    background-position: center;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-4-3 {
+    background:url(../img/food/food-4-3.png) no-repeat;
+}
+.pyramid-game .food .food-4-3 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-4-3.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+
+.food-5-1 {
+    background:url(../img/food/food-5-1.png) no-repeat;
+}
+.pyramid-game .food .food-5-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-5-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-5-2 {
+    background:url(../img/food/food-5-2.png) no-repeat;
+}
+.pyramid-game .food .food-5-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-5-2.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-5-3 {
+    background:url(../img/food/food-5-3.png) no-repeat;
+}
+.pyramid-game .food .food-5-3 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-5-3.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-5-4 {
+    background:url(../img/food/food-5-4.png) no-repeat;
+}
+.pyramid-game .food .food-5-4 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-5-4.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-5-5 {
+    background:url(../img/food/food-5-5.png) no-repeat;
+}
+.pyramid-game .food .food-5-5 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-5-5.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-1 {
+    background:url(../img/food/food-6-1.png) no-repeat;
+}
+.pyramid-game .food .food-6-1 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-1.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-2 {
+    background:url(../img/food/food-6-2.png) no-repeat;
+}
+.pyramid-game .food .food-6-2 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-2.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-3 {
+    background:url(../img/food/food-6-3.png) no-repeat;
+}
+.pyramid-game .food .food-6-3 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-3.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-4 {
+    background:url(../img/food/food-6-4.png) no-repeat;
+}
+.pyramid-game .food .food-6-4 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-4.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-5 {
+    background:url(../img/food/food-6-5.png) no-repeat;
+}
+.pyramid-game .food .food-6-5 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-5.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-6 {
+    background:url(../img/food/food-6-6.png) no-repeat;
+}
+.pyramid-game .food .food-6-6 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-6.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.food-6-7 {
+    background:url(../img/food/food-6-7.png) no-repeat;
+}
+.pyramid-game .food .food-6-7 {
+    width:100px;
+    height:100px;
+    background:url(../img/food/food-6-7.png) no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.gallery-item {
+    float:left;
+    padding:0px 15px 15px 0px;
+}

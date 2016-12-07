@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+    <meta charset=utf-8 />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/frame.css">
+    <title>Puzzle Game</title>
+    <script type="text/javascript">
+
+        // Load the Google Transliterate API
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+
+        function onLoad() {
+            var options = {
+                sourceLanguage:
+                google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage:
+                        [google.elements.transliteration.LanguageCode.SINHALESE],
+                shortcutKey: 'ctrl+g',
+                transliterationEnabled: true
+            };
+
+            // Create an instance on TransliterationControl with the required
+            // options.
+            var control =
+                    new google.elements.transliteration.TransliterationControl(options);
+
+            // Enable transliteration in the textbox with id
+            // 'transliterateTextarea'.
+            control.makeTransliteratable(['transliterateTextarea']);
+        }
+        google.setOnLoadCallback(onLoad);
+    </script>
+
+</head>
+<body>
+<div class="nav-div">
+    <div class=" container-fluid">
+        <ul class="nav nav-tabs main-tabs">
+            <li role="presentation" class="active"><a href="#">Puzzle Game</a></li>
+            <li role="presentation"><a href="#">Help</a></li>
+        </ul>
+
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5" style="padding: 30px">
+            <div class="panel panel-danger">
+                <div class="panel-heading row" style="margin: 0">
+
+
+                    Puzzle  (Press Enter After Typing) &nbsp; &nbsp; &nbsp; &nbsp;
+
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                     <button class="btn btn-success" onclick="checkPuzzle()">Check Answers</button>
+
+
+                </div>
+                <div class="panel-body" style="margin: auto">
+
+                    <textarea id="transliterateTextarea" class="form-control"></textarea>
+                    <div id="puzzle" class="puzzleDiv" style="height:100%; width:100%; margin-bottom: 20px"></div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-7" style="padding: 30px">
+
+            <div class="hint">
+                <div class="row">
+                    <div class="panel-group">
+                    <div class="col-md-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">හරහට</div>
+                            <div class="panel-body">
+                                <div class="row" id="horizontal"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">පහලට</div>
+                            <div class="panel-body">
+                                <div class="row" id="vertical"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="modal fade" id="textInput" role="dialog">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                <!--<h4 class="modal-title">Enter Letter</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<textarea id="transliterateTextarea" class="form-control"></textarea>-->
+
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" id="modalClose">Close</button>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<script src="assets/js/jquery-3.1.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="../shared/scormfunctions.js" type="text/javascript"></script>
+<script src="../shared/contentfunctions.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/puzzle.js"></script>
+<script type="text/javascript">
+
+    function ConvertMilliSecondsIntoSCORM2004Time(intTotalMilliseconds){
+
+        var ScormTime = "";
+
+        var HundredthsOfASecond;	//decrementing counter - work at the hundreths of a second level because that is all the precision that is required
+
+        var Seconds;	// 100 hundreths of a seconds
+        var Minutes;	// 60 seconds
+        var Hours;		// 60 minutes
+        var Days;		// 24 hours
+        var Months;		// assumed to be an "average" month (figures a leap year every 4 years) = ((365*4) + 1) / 48 days - 30.4375 days per month
+        var Years;		// assumed to be 12 "average" months
+
+        var HUNDREDTHS_PER_SECOND = 100;
+        var HUNDREDTHS_PER_MINUTE = HUNDREDTHS_PER_SECOND * 60;
+        var HUNDREDTHS_PER_HOUR   = HUNDREDTHS_PER_MINUTE * 60;
+        var HUNDREDTHS_PER_DAY    = HUNDREDTHS_PER_HOUR * 24;
+        var HUNDREDTHS_PER_MONTH  = HUNDREDTHS_PER_DAY * (((365 * 4) + 1) / 48);
+        var HUNDREDTHS_PER_YEAR   = HUNDREDTHS_PER_MONTH * 12;
+
+        HundredthsOfASecond = Math.floor(intTotalMilliseconds / 10);
+
+        Years = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_YEAR);
+        HundredthsOfASecond -= (Years * HUNDREDTHS_PER_YEAR);
+
+        Months = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MONTH);
+        HundredthsOfASecond -= (Months * HUNDREDTHS_PER_MONTH);
+
+        Days = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_DAY);
+        HundredthsOfASecond -= (Days * HUNDREDTHS_PER_DAY);
+
+        Hours = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_HOUR);
+        HundredthsOfASecond -= (Hours * HUNDREDTHS_PER_HOUR);
+
+        Minutes = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MINUTE);
+        HundredthsOfASecond -= (Minutes * HUNDREDTHS_PER_MINUTE);
+
+        Seconds = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_SECOND);
+        HundredthsOfASecond -= (Seconds * HUNDREDTHS_PER_SECOND);
+
+        if (Years > 0) {
+            ScormTime += Years + "Y";
+        }
+        if (Months > 0){
+            ScormTime += Months + "M";
+        }
+        if (Days > 0){
+            ScormTime += Days + "D";
+        }
+
+        //check to see if we have any time before adding the "T"
+        if ((HundredthsOfASecond + Seconds + Minutes + Hours) > 0 ){
+
+            ScormTime += "T";
+
+            if (Hours > 0){
+                ScormTime += Hours + "H";
+            }
+
+            if (Minutes > 0){
+                ScormTime += Minutes + "M";
+            }
+
+            if ((HundredthsOfASecond + Seconds) > 0){
+                ScormTime += Seconds;
+
+                if (HundredthsOfASecond > 0){
+                    ScormTime += "." + HundredthsOfASecond;
+                }
+
+                ScormTime += "S";
+            }
+
+        }
+
+        if (ScormTime == ""){
+            ScormTime = "0S";
+        }
+
+        ScormTime = "P" + ScormTime;
+
+        return ScormTime;
+    }
+
+    function RecordTest(score){
+//        console.log('called');
+//        console.log(score);
+        ScormProcessSetValue("cmi.score.raw", score);
+        ScormProcessSetValue("cmi.score.min", "0");
+        ScormProcessSetValue("cmi.score.max", "100");
+
+        var scaledScore = score / 290;
+        ScormProcessSetValue("cmi.score.scaled", scaledScore);
+
+        //consider 70% to be passing
+        if (score >= 50){
+            ScormProcessSetValue("cmi.success_status", "passed");
+        }
+        else{
+            ScormProcessSetValue("cmi.success_status", "failed");
+        }
+    }
+    ScormProcessInitialize();
+    ScormProcessSetValue("cmi.completion_status", "completed");
+    var time =ConvertMilliSecondsIntoSCORM2004Time(new Date().getTime());
+    ScormProcessSetValue("cmi.session_time", time);
+    ScormProcessSetValue("cmi.exit", "");
+
+</script>
+<script>
+    createPuzzle();
+//    checkPuzzle();
+</script>
+
+
+</body>
+</html>
