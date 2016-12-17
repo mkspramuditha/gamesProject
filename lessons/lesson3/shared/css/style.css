@@ -1,5 +1,5 @@
 body .container-div {
-  background-color: #FFCF06; }
+  background-color: #bb9606; }
   body .container-div .header-row {
     padding-left: 25px;
     border-bottom: 3px solid #2d3e52; }
@@ -25,7 +25,7 @@ body .container-div {
       body .container-div .content-row .col-left > div {
         background-color: #f0f1f3; }
         body .container-div .content-row .col-left > div table {
-          background: #FFCF06;
+          background: #bb9606;
           width: 100%; }
           body .container-div .content-row .col-left > div table tr {
             border: 2px solid #fff; }
@@ -35,11 +35,11 @@ body .container-div {
               font-weight: bold;
               padding: 5px 5px 5px 25px; }
               body .container-div .content-row .col-left > div table tr td.active {
-                background-color: #fdff1b; }
+                background-color: #cbd816; }
                 body .container-div .content-row .col-left > div table tr td.active:hover {
-                  background-color: #fdff1b; }
+                  background-color: #cbd816; }
               body .container-div .content-row .col-left > div table tr td:hover {
-                background-color: #fdff1b;
+                background-color: #cbd816;
                 cursor: pointer; }
     body .container-div .content-row .col-right {
       padding-left: 25px; }
