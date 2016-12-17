@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -51,47 +52,47 @@
         /*************************************/
         //content definition
         /*************************************/
-       /* ScormProcessSetValue("cmi.learner_preference.language", "eng");
-        var language = ScormProcessGetValue("cmi.learner_preference.language", true);
-        console.log(language);
-        var pageArray=[];
-        if(language =="sin"){
-            pageArray = new Array(5);
+        /* ScormProcessSetValue("cmi.learner_preference.language", "eng");
+         var language = ScormProcessGetValue("cmi.learner_preference.language", true);
+         console.log(language);
+         var pageArray=[];
+         if(language =="sin"){
+         pageArray = new Array(5);
 
-            pageArray[0] = "tabs/1-1.html";
-            pageArray[1] = "tabs/1-2.html";
-            pageArray[2] = "tabs/1-3.html";
-            pageArray[3] = "tabs/1-4.html";
-            pageArray[4] = "tabs/1-5.html";
-            pageArray[5] = "tabs/1-6.html";
-            pageArray[6] = "tabs/1-7.html";
-            pageArray[7] = "tabs/1-8.html";
-            pageArray[8] = "tabs/1-9.html";
-            pageArray[9] = "tabs/1-10.html";
-            pageArray[10] = "tabs/1-11.html";
-            pageArray[11] = "tabs/1-12.html";
-            pageArray[12] = "tabs/1-13.html";
-            pageArray[13] = "tabs/1-14.html";
-            pageArray[14] = "tabs/1-15_16.html";
-        }
-        else if(language=="eng"){
-            pageArray = new Array(5);
+         pageArray[0] = "tabs/1-1.html";
+         pageArray[1] = "tabs/1-2.html";
+         pageArray[2] = "tabs/1-3.html";
+         pageArray[3] = "tabs/1-4.html";
+         pageArray[4] = "tabs/1-5.html";
+         pageArray[5] = "tabs/1-6.html";
+         pageArray[6] = "tabs/1-7.html";
+         pageArray[7] = "tabs/1-8.html";
+         pageArray[8] = "tabs/1-9.html";
+         pageArray[9] = "tabs/1-10.html";
+         pageArray[10] = "tabs/1-11.html";
+         pageArray[11] = "tabs/1-12.html";
+         pageArray[12] = "tabs/1-13.html";
+         pageArray[13] = "tabs/1-14.html";
+         pageArray[14] = "tabs/1-15_16.html";
+         }
+         else if(language=="eng"){
+         pageArray = new Array(5);
 
-            pageArray[0] = "tabs/1-1.html";
-            pageArray[1] = "tabs/1-2.html";
-            pageArray[2] = "tabs/1-3.html";
-            pageArray[3] = "tabs/1-4.html";
-            pageArray[4] = "tabs/1-5.html";
-        }
-        else if(language == "tam"){
-            console.log(language);
-            pageArray = new Array(5);
+         pageArray[0] = "tabs/1-1.html";
+         pageArray[1] = "tabs/1-2.html";
+         pageArray[2] = "tabs/1-3.html";
+         pageArray[3] = "tabs/1-4.html";
+         pageArray[4] = "tabs/1-5.html";
+         }
+         else if(language == "tam"){
+         console.log(language);
+         pageArray = new Array(5);
 
-            pageArray[0] = "tabs/1-1.html";
-            pageArray[1] = "tabs/1-2.html";
-        }
+         pageArray[0] = "tabs/1-1.html";
+         pageArray[1] = "tabs/1-2.html";
+         }
 
-        */
+         */
 
         pageArray = new Array(5);
 
@@ -371,96 +372,212 @@
 </head>
 
 
-
-
 <body onload="doStart(false);" onbeforeunload="doUnload(false);" onunload="doUnload();">
 
 
-    <div class="container- container-div">
-        <div class="row header-row">
-            <!--<img src="./img/logo.min.png" alt="">-->
-            <div class="logo-text">
-               ආහාර සහ පෝෂ්‍ය පදාර්ථ
+<div class="container- container-div">
+    <div class="row header-row">
+        <!--<img src="./img/logo.min.png" alt="">-->
+        <div class="logo-text">
+            ආහාර සහ පෝෂ්‍ය පදාර්ථ
 
-            </div>
-            <div class="arrows pull-right">
-                <img style="cursor: pointer" id="butPrevious" src="./img/left-arrow.png" alt="">
-                <img style="cursor: pointer" id="butNext" src="./img/right-arrow.png" alt="">
-            </div>
         </div>
-        <div class="row content-row">
-            <div class="col-sm-3 col-left">
-                <div id ="menuTable">
-                    <table>
-                        <tr>
-                            <td id="menu-0" onclick="goPage(0)">1 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-1" onclick="goPage(1)">2 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-2" onclick="goPage(2)">3 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-3" onclick="goPage(3)">4 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-4" onclick="goPage(4)">5 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-5" onclick="goPage(5)">6 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-6" onclick="goPage(6)">7 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-7" onclick="goPage(7)">8 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-8" onclick="goPage(8)">9 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-9" onclick="goPage(9)">10 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-10" onclick="goPage(10)">11 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-11" onclick="goPage(11)">12 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-12" onclick="goPage(12)">13 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-13" onclick="goPage(13)">14 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-14" onclick="goPage(14)">15 කොටස</td>
-                        </tr>
+        <div class="arrows pull-right">
+            <img style="cursor: pointer" id="butPrevious" src="./img/left-arrow.png" alt="">
+            <img style="cursor: pointer" id="butNext" src="./img/right-arrow.png" alt="">
+        </div>
+    </div>
+    <div class="row content-row">
+        <div class="col-sm-3 col-left">
+            <div id="menuTable">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                           aria-expanded="true" aria-controls="collapseOne">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                ආහාර, පෝෂණය හා යහජීවනය අතර සම්බන්ධය
+                            </h4>
+                        </div>
+                        </a>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <table>
 
-                     
-                      
+                            <tr>
+                                <td id="menu-0" onclick="goPage(0)">හැඳින්වීම</td>
+                            </tr>
+                            <tr>
+                                <td id="menu-1" onclick="goPage(1)">ආහාර, අවශ්‍යතා සහ පෝෂණය </td>
+                            </tr>
+                            <tr>
+                                <td id="menu-2" onclick="goPage(2)">පෝෂක සහ යහජීවනය</td>
+                            </tr>
+                            </table>
 
-                    </table>
-                </div>
-            </div>
-            <div class="col-sm-9 col-right">
-                <div>
-                    <div class="row iframe-row" id="iframe-div">
-                        <iframe width="100%" height="100%" id="contentFrame" src=""></iframe>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                ආහාර වලින් ලැබෙන ප්‍රයෝජන
+                            </h4>
+                        </div>
+                        </a>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <table>
+                            <tr>
+                                <td id="menu-3" onclick="goPage(3)">කාබෝහයිඩ්‍රේට් සහ මේදය
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="menu-4" onclick="goPage(4)">වර්ධක ආහාර, ආරක්ෂක ආහාර සහ බත් </td>
+                            </tr>
+                        </table>
+
+
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                ආහාරවල අඩංගු ප්‍රධාන පෝෂක සංඝටක
+                            </h4>
+                        </div>
+                        </a>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingThree">
+                            <table>
+                            <tr>
+                                <td id="menu-5" onclick="goPage(5)">පෝෂණ සංඝටක සහ පෝෂණ වර්ග
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
                     </div>
 
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    විවිධ ආහාර කාණ්ඩ
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingFour">
+                            <table>
+                                <tr>
+                                    <td id="menu-6" onclick="goPage(6)">ධාන්‍ය වර්ග, පියළි බෝග සහ සත්වමය  ආහාර</td>
+                                </tr>
+                                <tr>
+                                    <td id="menu-7" onclick="goPage(7)">එළවළු,පළතුරු සහ කිරි ආහාර
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="menu-8" onclick="goPage(8)">මේදය සහ ශක්ති පෝෂක
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <h4 class="panel-title">
+                                    ශක්ති සමතුලිතතාව
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingFive">
+                            <table>
+                                <tr>
+                                    <td id="menu-9" onclick="goPage(9)">ශක්ති සමතුලිතතාව
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <div class="panel-heading" role="tab" id="headingSix">
+                                <h4 class="panel-title">
+                                    ආහාර පිරමීඩය
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingSix">
+                            <table>
+                                <tr>
+                                    <td id="menu-10" onclick="goPage(10)">හැඳින්වීම</td>
+                                </tr>
+                                <tr>
+                                    <td id="menu-11" onclick="goPage(11)">ආහාර පිරමීඩය</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <div class="panel-heading" role="tab" id="headingSeven">
+                                <h4 class="panel-title">
+                                    සමබල ආහාරවේල
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingSeven">
+                            <table>
+                                <tr>
+                                    <td id="menu-12" onclick="goPage(12)">සමබල ආහාර</td>
+                                </tr>
+                                <tr>
+                                    <td id="menu-13" onclick="goPage(13)">සාරාංශය</td>
+                                </tr>
+                                <tr>
+                                    <td id="menu-14" onclick="goPage(14)">ආහාර කොටසක තිබිය යුතු ප්‍රමාණයන්</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
 
                 </div>
-
             </div>
         </div>
+        <div class="col-sm-9 col-right">
+            <div>
+                <div class="row iframe-row" id="iframe-div">
+                    <iframe width="100%" height="100%" id="contentFrame" src=""></iframe>
+                </div>
 
+
+            </div>
+
+        </div>
     </div>
 
-    <script type="text/javascript" src="./js/app.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
+</div>
+
+<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>

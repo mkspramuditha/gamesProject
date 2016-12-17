@@ -70,3 +70,20 @@ body .container-div .content-row .col-right .iframe-row iframe {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+/*============== below this is not in scss!*/
+
+body .container-div .content-row .col-left .panel {
+  margin: 0;
+
+}
+body .container-div .content-row .col-left .panel-heading {
+  background: #2d3e52;
+  color: #fff;
+}
+body .container-div .content-row .col-left .panel-heading:hover {
+  background: #3f5873;
+  color: #fff;
+}
