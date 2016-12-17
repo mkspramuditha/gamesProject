@@ -352,69 +352,204 @@
         </div>
         <div class="row content-row">
             <div class="col-sm-3 col-left">
-                <div>
-                    <table>
-                       
-                        <tr>
-                            <td id="menu-0" onclick="goPage(0)">1 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-1" onclick="goPage(1)">2 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-2" onclick="goPage(2)">3 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-3" onclick="goPage(3)">4 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-4" onclick="goPage(4)">5 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-5" onclick="goPage(5)">6 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-6" onclick="goPage(6)">7 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-7" onclick="goPage(7)">8 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-8" onclick="goPage(8)">9 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-9" onclick="goPage(9)">10 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-10" onclick="goPage(10)">11 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-11" onclick="goPage(11)">12 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-12" onclick="goPage(12)">13 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-13" onclick="goPage(13)">14 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-14" onclick="goPage(14)">15 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-15" onclick="goPage(15)">16 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-16" onclick="goPage(16)">17 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-17" onclick="goPage(17)">18 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-18" onclick="goPage(18)">19 කොටස</td>
-                        </tr>
+                <div id="menuTable">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        ආහාරවල සුරක්ෂිතතාවය යනු
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                 aria-labelledby="headingOne">
+                                <table>
 
-                    </table>
+                                    <tr>
+                                        <td id="menu-0" onclick="goPage(0)">හැඳින්වීම</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-1" onclick="goPage(1)">ආහාරවල සුරක්ෂිතතාවය
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        ආහාර දූෂ්‍ය වීම හා සනීපාරක්ෂාව
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <table>
+                                    <tr>
+                                        <td id="menu-2" onclick="goPage(2)">ආහාර දුෂ්‍ය විම සහ සනීපාරක්ෂාව</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-3" onclick="goPage(3)">අත් පිරිසිදු කිරිම</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-4" onclick="goPage(4)">අත් පිරිසිදු කිරීමේ ක්‍රියාමාර්ග</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="menu-5" onclick="goPage(5)">සනීපාරක්ෂක ක්‍රමසනීපාරක්ෂක ක්‍රම
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-6" onclick="goPage(6)">සනීපාරක්ෂාව සහ නරක පුරුදු
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-7" onclick="goPage(7)">නොකළ යුතු දේ </td>
+                                    </tr>
+
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        ආහාරවල ස්වාභාවිකව අඩංගු විෂ වර්ග
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingThree">
+                                <table>
+                                    <tr>
+                                        <td id="menu-8" onclick="goPage(8)">විෂ වර්ග ඇතිවිය හැකි ආකාර
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-9" onclick="goPage(9)">වැළකිය යුතු ආකාර
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-10" onclick="goPage(10)">වැළකිය යුතු ආකාර තවදුරටත්
+                                        </td>
+                                    </tr>
+
+
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+                                        ආහාර විෂවීම
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFour">
+                                <table>
+                                    <tr>
+                                        <td id="menu-11" onclick="goPage(11)">ආහාර විෂ විම
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-12" onclick="goPage(12)">ආහාර විෂ විම වැලැක්විම
+                                        </td>
+                                    </tr>
+
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <div class="panel-heading" role="tab" id="headingFive">
+                                    <h4 class="panel-title">
+                                        පිරිසිදු ජලය
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFive">
+                                <table>
+                                    <tr>
+                                        <td id="menu-13" onclick="goPage(13)">පිරිසිදු ජලය යනු කුමක්ද ?</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <div class="panel-heading" role="tab" id="headingSix">
+                                    <h4 class="panel-title">
+                                        ආහාර ආසාත්මිකතා
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingSix">
+                                <table>
+                                    <tr>
+                                        <td id="menu-14" onclick="goPage(14)">ආහාර ආසාත්මිකතා හැඳින්වීම</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <div class="panel-heading" role="tab" id="headingSeven">
+                                    <h4 class="panel-title">
+                                        ස්වාභාවික කුළුබඩු
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingSeven">
+                                <table>
+                                    <tr>
+                                        <td id="menu-15" onclick="goPage(15)">කුළුබඩු හැඳින්වීම සහ කුරුඳු</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-16" onclick="goPage(16)">සුදුළුණු සහ ඉඟුරු</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-17" onclick="goPage(17)">කහ</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-18" onclick="goPage(18)">සාරාංශය</td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+
             </div>
             <div class="col-sm-9 col-right">
                 <div>
