@@ -346,43 +346,151 @@
         </div>
         <div class="row content-row">
             <div class="col-sm-3 col-left">
-                <div>
-                    <table>
-                       
-                        <tr>
-                            <td id="menu-0" onclick="goPage(0)">1 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-1" onclick="goPage(1)">2 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-2" onclick="goPage(2)">3 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-3" onclick="goPage(3)">4 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-4" onclick="goPage(4)">5 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-5" onclick="goPage(5)">6 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-6" onclick="goPage(6)">7 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-7" onclick="goPage(7)">8 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-8" onclick="goPage(8)">9 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-9" onclick="goPage(9)">10 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-10" onclick="goPage(10)">11 කොටස</td>
-                        </tr>
-                    </table>
+                <div id="menuTable">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        ශ්‍රී ලංකාවේ පෝෂණ ඌනතා
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                 aria-labelledby="headingOne">
+                                <table>
+
+                                    <tr>
+                                        <td id="menu-0" onclick="goPage(0)">හැඳින්වීම</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-1" onclick="goPage(1)">ප්‍රෝටීන් ශක්ති ඌනතා </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-2" onclick="goPage(2)">ප්‍රෝටීන් ශක්ති ඌනතාවයට හේතු</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        ආහාර හා සම්බන්ධ බෝ නොවන රෝග
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <table>
+                                    <tr>
+                                        <td id="menu-3" onclick="goPage(3)">කාබෝහයිඩ්‍රේට් සහ මේදය
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-4" onclick="goPage(4)">වර්ධක ආහාර, ආරක්ෂක ආහාර සහ බත් </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        ආහාරවල අඩංගු ප්‍රධාන පෝෂක සංඝටක
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingThree">
+                                <table>
+                                    <tr>
+                                        <td id="menu-5" onclick="goPage(5)">පෝෂණ සංඝටක සහ පෝෂණ වර්ග
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+                                        විවිධ ආහාර කාණ්ඩ
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFour">
+                                <table>
+                                    <tr>
+                                        <td id="menu-6" onclick="goPage(6)">ධාන්‍ය වර්ග, පියළි බෝග සහ සත්වමය  ආහාර</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-7" onclick="goPage(7)">එළවළු,පළතුරු සහ කිරි ආහාර
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-8" onclick="goPage(8)">මේදය සහ ශක්ති පෝෂක
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <div class="panel-heading" role="tab" id="headingFive">
+                                    <h4 class="panel-title">
+                                        ශක්ති සමතුලිතතාව
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFive">
+                                <table>
+                                    <tr>
+                                        <td id="menu-9" onclick="goPage(9)">ශක්ති සමතුලිතතාව
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <div class="panel-heading" role="tab" id="headingSix">
+                                    <h4 class="panel-title">
+                                        ආහාර පිරමීඩය
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingSix">
+                                <table>
+                                    <tr>
+                                        <td id="menu-10" onclick="goPage(10)">හැඳින්වීම</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-11" onclick="goPage(11)">ආහාර පිරමීඩය</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
             </div>
             <div class="col-sm-9 col-right">
