@@ -353,65 +353,213 @@
         </div>
         <div class="row content-row">
             <div class="col-sm-3 col-left">
-                <div>
-                    <table>
-                       
-                        <tr>
-                            <td id="menu-0" onclick="goPage(0)">1 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-1" onclick="goPage(1)">2 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-2" onclick="goPage(2)">3 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-3" onclick="goPage(3)">4 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-4" onclick="goPage(4)">5 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-5" onclick="goPage(5)">6 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-6" onclick="goPage(6)">7 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-7" onclick="goPage(7)">8 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-8" onclick="goPage(8)">9 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-9" onclick="goPage(9)">10 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-10" onclick="goPage(10)">11 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-11" onclick="goPage(11)">12 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-12" onclick="goPage(12)">13 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-13" onclick="goPage(13)">14 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-14" onclick="goPage(14)">15 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-15" onclick="goPage(15)">16 කොටස</td>
-                        </tr>
-                        <tr>
-                            <td id="menu-16" onclick="goPage(16)">17 කොටස</td>
-                        </tr>
+                <div id="menuTable">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        වර්ධනයට බලපාන හේතු
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                 aria-labelledby="headingOne">
+                                <table>
 
-                     
-                      
+                                    <tr>
+                                        <td id="menu-0" onclick="goPage(0)">හැඳින්වීම</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-1" onclick="goPage(1)">වර්ධනයට බලපාන හේතු </td>
+                                    </tr>
 
-                    </table>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        දේහ ස්කන්ධ දර්ශකය
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <table>
+                                    <tr>
+                                        <td id="menu-2" onclick="goPage(2)">දේහ ස්කන්ධ දර්ශකය</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-3" onclick="goPage(3)">දේහ ස්කන්ධ දර්ශකය තවදුරටත්
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-4" onclick="goPage(4)">වයසට සරිලන දේහ ස්කන්ධ දර්ශකය
+                                        </td>
+                                    </tr><tr>
+                                    <td id="menu-5" onclick="goPage(5)">උස සහ බර
+                                    </td>
+                                </tr>
+
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        වර්ධක ප්‍රස්තාර
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingThree">
+                                <table>
+                                    <tr>
+                                        <td id="menu-6" onclick="goPage(6)">වර්ධක ප්‍රස්ථාර</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-7" onclick="goPage(7)">වයසට අනුව උස                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-8" onclick="goPage(8)">ශරීර ස්කන්ධ දර්ශකය
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+                                        ඉනෙහි ප්‍රමාණය මැනීම
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFour">
+                                <table>
+                                    <tr>
+                                        <td id="menu-9" onclick="goPage(9)">ඉනෙහි වට ප්‍රමාණය මැනීම
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <div class="panel-heading" role="tab" id="headingFive">
+                                    <h4 class="panel-title">
+                                        ගර්භාෂය තුළ පෝෂණය සහ ළදරු, පෙර ළමා වියේ වර්ධනය
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingFive">
+                                <table>
+                                    <tr>
+                                        <td id="menu-10" onclick="goPage(10)">ගර්භාෂය තුළ පෝෂණය සහ වර්ධනය</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-11" onclick="goPage(11)">ළදරුවිය, පෙර ළමාවිය සහ ගර්භිනි අවස්ථාව
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <div class="panel-heading" role="tab" id="headingSix">
+                                    <h4 class="panel-title">
+                                        ගර්භනී අවධියේ විශේෂ පෝෂණ අවශ්‍යතා
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingSix">
+                                <table>
+                                    <tr>
+                                        <td id="menu-12" onclick="goPage(12)">යෞවන වියගර්භිනි අවස්ථාව
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <div class="panel-heading" role="tab" id="headingSeven">
+                                    <h4 class="panel-title">
+                                        වයෝවෘද්ධ අවධියේ පෝෂණ අවශ්‍යතා
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingSeven">
+                                <table>
+                                    <tr>
+                                        <td id="menu-13" onclick="goPage(13)">වයෝවෘද්ධ අවධියේ පෝෂණ අවශ්‍යතා</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-14" onclick="goPage(14)">වයෝවෘද්ධ අවධිය, අයඩීන් හා ෆ්ලෝරයිඩ් පරිභෝජනය
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseEight" aria-expanded="false" aria-controls="collapseSeven">
+                                <div class="panel-heading" role="tab" id="headingEight">
+                                    <h4 class="panel-title">
+                                        අයඩීන් හා ෆ්ලෝරයිඩි පරිභෝජනය
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel"
+                                 aria-labelledby="headingEight">
+                                <table>
+                                    <tr>
+                                        <td id="menu-15" onclick="goPage(15)">අයඩීන් හා ෆ්ලෝරයිඩ් පරිභෝජනය</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="menu-16" onclick="goPage(16)">සාරාංශය</td>
+                                    </tr>
+
+
+                                </table>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="col-sm-9 col-right">
